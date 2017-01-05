@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#3f74ad49"
+    tools:context="com.thehobbygardener.greenr.Achievements">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="16sp"
+            android:text="Achievements" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_plot_dimens"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="12dp"
+            android:text="Use the app to unlock the badges below!"/>
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/plot_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:verticalSpacing="4dp"
+        android:horizontalSpacing="4dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:background="#e4e7e8"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:padding="4dp"
+        android:layout_marginTop="24dp"></GridView>
+
+</LinearLayout>

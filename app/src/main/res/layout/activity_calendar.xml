@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical"
+    tools:context="com.thehobbygardener.greenr.Calendar"
+    >
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/main_toolbar"/>
+
+    <com.thehobbygardener.greenr.MyCalendar
+        xmlns:calendarNS="http://schemas.android.com/apk/res/com.thehobbygardener.greenr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/home_calendar"
+        calendarNS:dateFormat="MMMM yyyy"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_reminder"
+        android:text="Add a reminder"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/manage_reminders"
+        android:text="Manage recurring reminders"/>
+
+</LinearLayout>

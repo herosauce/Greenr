@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.thehobbygardener.greenr.PlantDetails">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_plant_name"
+        android:text="Plant Name"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_button_holder">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_remove"
+            android:text="Remove"
+            android:layout_weight="0.25"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button__reminder"
+            android:text="Reminder"
+            android:layout_weight="0.25"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_log"
+            android:text="Add log"
+            android:layout_weight="0.25"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_harvest"
+            android:text="Harvest"
+            android:layout_weight="0.25"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <!-- Sun Requirements -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sun Requirements"
+                android:layout_marginLeft="15dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:background="#e4a3fe" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_sun_reqs"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Sun Requirements"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Soil pH -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Soil pH"
+                android:layout_marginLeft="15dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:background="#e4a3fe" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_pH"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Soil pH"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Type of Soil -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Soil Type"
+                android:layout_marginLeft="15dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:background="#e4a3fe" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_soil_type"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Type of Soil"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Companion Plants -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Companions"
+                android:layout_marginLeft="15dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:background="#e4a3fe" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_companions"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Companion Plants"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Ally Plants -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allies"
+                android:layout_marginLeft="15dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:background="#e4a3fe" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_allies"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Ally Plants"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Companion Plants -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enemies"
+                android:layout_marginLeft="15dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:background="#e4a3fe" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_enemies"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="Enemy Plants"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

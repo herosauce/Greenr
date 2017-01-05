@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.thehobbygardener.greenr.PlotManager"
+    android:background="#3f74ad49">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_plot_name"
+            android:layout_margin="8dp"
+            android:textSize="16sp"
+            android:text="My plot" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_plot_dimens"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="12sp"
+            android:text="This plot measures x by x units."/>
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/plot_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:verticalSpacing="4dp"
+        android:horizontalSpacing="4dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:background="#4c865f28"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:padding="4dp"
+        android:layout_marginTop="24dp"></GridView>
+
+</LinearLayout>

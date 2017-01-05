@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Activity Name"
+    android:id="@+id/tv_nav"
+    android:padding="4dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginStart="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/white"
+    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />

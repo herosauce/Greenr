@@ -1,0 +1,233 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:minWidth="320dp"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context="com.thehobbygardener.greenr.FragDailyLog"
+    android:background="#e5ffe5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/fragment_title"
+        android:layout_alignParentTop="true"
+        android:id="@+id/frag_title"
+        android:textSize="22dp" />
+
+    <!--Task icons-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:id="@+id/icon_holder"
+        android:layout_below="@+id/frag_title">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/watering_can_32"
+            android:id="@+id/icon_watering"
+            android:padding="12dp"
+            android:contentDescription="watering can"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pruning_shears_32"
+            android:id="@+id/icon_pruning"
+            android:padding="12dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/watering_can_32"
+            android:id="@+id/icon_planting"
+            android:padding="12dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pruning_shears_32"
+            android:id="@+id/icon_weeding"
+            android:padding="12dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log_notes"
+        android:id="@+id/tv_log_notes" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine|textCapSentences"
+        android:imeOptions="actionDone"
+        android:lines="4"
+        android:minLines="3"
+        android:maxLines="8"
+        android:scrollbars="vertical"
+        android:hint="@string/log_hint"
+        android:id="@+id/et_log_notes"
+        android:background="#fffff2" />
+
+    <!-- Reminder-related controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Reminder"
+            android:layout_marginLeft="15dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:background="#e4a3fe" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_reminder"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="Create reminder?" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cb_set_reminder" />
+        </LinearLayout>
+
+        <!--Reminder start date-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ll_reminder_start_date_holder"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start date:"
+                android:textSize="12sp"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="4dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_start_date"
+                android:imeOptions="actionNext"
+                android:inputType="datetime"
+                android:minWidth="40dp"/>
+
+        </LinearLayout>
+
+        <!--Repeat alert?-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ll_repeating_reminder_holder"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repeating?"
+                android:textSize="12sp"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="4dp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cb_repeating_reminder" />
+
+        </LinearLayout>
+
+        <!--Repeat frequency-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ll_reminder_frequency_holder"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repeat every: "/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_freq"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="days"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Cancel/Save buttons-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:style="?android:attr/buttonBarButtonStyle">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/bCancel"
+            android:text="@string/button_cancel"
+            android:textAllCaps="false"
+            android:background="@drawable/delete_button_border"
+            android:textSize="22dp"
+            android:layout_margin="8dp"
+            android:textColor="#FFFB6E9D" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/bSave"
+            android:text="@string/button_save"
+            android:textAllCaps="false"
+            android:background="@drawable/add_button_border"
+            android:textColor="#FFA5FFA3"
+            android:layout_margin="8dp"
+            android:textSize="22dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
